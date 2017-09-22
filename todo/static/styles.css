@@ -1,0 +1,105 @@
+body {
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+ul {
+  padding: 0;
+  list-style:none;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a img {
+  width: 20px;
+  height: 20px;
+}
+
+label {
+  display:block;
+  margin-top:10px;
+  magin-bottom: 20px;
+}
+
+.searchForm {
+  margin-left: 3px;
+  margin-bottom: 3px;
+}
+
+.submitForm li {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-weight: bold;
+}
+
+.editDelete {
+  margin-left: 95%;
+}
+
+.header {
+  overflow:auto;
+  width:100%;
+  padding-left: 30%;
+}
+
+.mainTitle {
+    margin-left: 5%;
+    vertical-align:middle;
+    color: #008080;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.mainIcon {
+  vertical-align:middle;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+}
+
+.container {
+  background-color: #AFEEEE;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  max-width: 60%;
+}
+
+.list li {
+  padding: 3px;
+  position: relative;
+  background: #20B2AA;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-bottom: 1px solid black;
+}
+
+.list li:hover {
+	cursor:pointer;
+	background: darkcyan  
+}
+
+.submitForm {
+  text-align:center;
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.submitBtn {
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.searchBtn {
+  vertical-align: bottom;
+  width: 20px;
+  height: 20px;
+}

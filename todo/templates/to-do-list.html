@@ -1,0 +1,83 @@
+{% block body %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do Liste</title>
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Fjalla+One|Ubuntu+Condensed" rel="stylesheet">
+
+    <link rel=stylesheet type=text/css href="C:\Users\Bassn\PycharmProjects\todo\todo\static\styles.css">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <img class="mainIcon" src="..\static\main.png">
+            <span class="mainTitle">To Do List</span>
+        </div>
+
+        <form class="searchForm" action="{{ url_for('search_item') }}" method="post">
+                <input type="text" name="search_text" >
+                <input class="searchBtn" type="image" src="..\static\search.png" border="0" alt="Submit" />
+        </form>
+
+        <ul class="list">
+            {% for entry in entries %}
+
+                    {% if entry.state == 'finished' %}
+                    <li style="background-color: #AFEEEE">
+                    {% else %}
+                    <li>
+                    {% endif %}
+                        <a href="/changestate/{{ entry.id }}">
+                        {% if entry.state == 'finished' %} <strike> {% endif %}
+
+                            <div class="entryText">
+                                <h3>{{ entry.title }}</h3>
+                                {{ entry.descr }}
+                            </div>
+
+                            <div class="editDelete">
+                                <a href="/delete/{{ entry.id }}"><img src="..\static\remove.png"></a>
+                            </div>
+
+                        {% if entry.state == "finished" %} </strike> {% endif %}
+                        </a>
+                    </li>
+
+            {% else %}
+                <li><h3>There're no entries yet.</h3>
+                Add a new Item with the Formular.
+                </li>
+            {%  endfor %}
+        </ul>
+
+        <form class="submitForm" action="{{ url_for('add_item') }}" method="post" >
+            <ul>
+                <li>
+                    <label for="title">Title</label>
+                    <input type="text" name="title">
+                </li>
+
+                <li>
+                    <label for="descr">Description</label>
+                    <textarea name="descr" rows="5" cols="60"></textarea>
+                </li>
+
+                <li>
+                    <input class="submitBtn" type="image" src="..\static\add.png" border="0" alt="Submit" />
+                </li>
+            </ul>
+        </form>
+
+
+    </div>
+
+</body>
+</html>
+{% endblock %}
