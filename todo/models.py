@@ -1,3 +1,12 @@
+# To-Do-List-Project
+# 15.07.2017
+#
+# Author: Sebastian Zoske
+# Matr-Nr: 554384
+# Informatics3
+# HTW Berlin
+# s0554384@htw-berlin.de
+
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
