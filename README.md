@@ -1,6 +1,6 @@
 # To-Do-List-Python-
 
-* Application to manage a To-DO
+* Application to manage a To-DO list
 * add, edit or delete task(s)
 * find certain task(s) with the searching function
 * data is stored local in the "database.db" file
