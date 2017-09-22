@@ -1,4 +1,4 @@
-# To-Do-List-Python-
+# To-Do-List-Python
 
 * Application to manage a To-DO list
 * add, edit or delete task(s)
