@@ -8,10 +8,7 @@
 
 ## Technologies/Languages/Frameworks
 
-* Anaconda3, includes:
-            - Python
-            - SQLAlchemy (SQLite)
-            - Flask
+* Anaconda3 -> includes: Python, SQLAlchemy (SQLite), Flask
 * HTML
 * CSS
 
